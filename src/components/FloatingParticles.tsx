@@ -20,7 +20,7 @@ export default function FloatingParticles({ type, count = 12 }: Props) {
   const items = useMemo(
     () =>
       Array.from({ length: count }).map((_, i) => {
-        const left = Math.random() * 100;
+        const left = type === 'firefly' ? Math.random() * 100 : 5 + Math.random() * 85;
         const delay = Math.random() * 15;
         const duration = 12 + Math.random() * 14;
         const size = type === 'firefly' ? 4 + Math.random() * 4 : 14 + Math.random() * 20;
@@ -54,12 +54,11 @@ export default function FloatingParticles({ type, count = 12 }: Props) {
             style={{
               position: 'absolute',
               left: `${p.left}%`,
-              top: '-30px',
+              top: 'clamp(12px, 4vw, 24px)',
               fontSize: `${p.size}px`,
               animation: `particle-rise ${p.duration}s linear ${p.delay}s infinite`,
-              animationFillMode: 'both',
               ['--drift' as string]: `${p.drift}px`,
-              opacity: 0,
+              opacity: 0.8,
             }}
           >
             {EMOJI[type]}
