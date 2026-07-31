@@ -25,7 +25,7 @@ function App() {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="relative min-h-screen text-white">
+    <div className="relative min-h-screen max-w-full overflow-x-clip text-white">
       <CursorGlow />
       <Aurora />
 
@@ -34,7 +34,7 @@ function App() {
       </AnimatePresence>
 
       {loaded && (
-        <main className="relative z-10">
+        <main className="relative z-10 max-w-full overflow-x-clip">
           <Hero />
           <LoveLetter />
           <Poetry />

@@ -29,7 +29,7 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      className="relative flex min-h-[100svh] flex-col items-center justify-start overflow-hidden pb-24 pt-[max(4.5rem,env(safe-area-inset-top))] md:justify-center md:py-20"
       style={{ ['--px' as string]: '0px', ['--py' as string]: '0px' }}
     >
       {/* cloud-like gradient blobs */}
@@ -82,7 +82,7 @@ export default function Hero() {
 
       <motion.div
         style={{ y, opacity }}
-        className="relative z-10 text-center px-6 max-w-4xl"
+        className="relative z-10 w-full max-w-4xl px-4 text-center sm:px-6"
       >
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -97,7 +97,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 1.2, type: 'spring' }}
-          className="font-playfair text-6xl md:text-8xl lg:text-9xl font-bold gradient-text leading-none drop-shadow-[0_0_40px_rgba(255,155,179,0.4)]"
+          className="font-playfair text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold gradient-text leading-none drop-shadow-[0_0_40px_rgba(255,155,179,0.4)]"
         >
           Mahnoor ❤️
         </motion.h1>
@@ -137,7 +137,7 @@ export default function Hero() {
 
       <motion.div
         style={{ opacity }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
+        className="absolute bottom-[max(1.5rem,env(safe-area-inset-bottom))] left-1/2 z-10 -translate-x-1/2 md:bottom-10"
         animate={{ y: [0, 12, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
