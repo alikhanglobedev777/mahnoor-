@@ -116,6 +116,28 @@ body {
   100% { transform: translateY(-10vh) translateX(var(--drift, 50px)); opacity: 0; }
 }
 
+/* Keeps flowers, hearts, and sparkles fully visible before they fade away. */
+@keyframes particle-rise {
+  0% { transform: translateY(110vh) translateX(0); opacity: 0; }
+  10% { opacity: 0.8; }
+  82% { opacity: 0.8; }
+  94%, 100% {
+    transform: translateY(4rem) translateX(var(--drift, 50px));
+    opacity: 0;
+  }
+}
+
+/* Android browsers often report no safe-area inset even beneath their top UI. */
+.hero-mobile-safe {
+  padding-top: calc(7rem + env(safe-area-inset-top, 0px));
+}
+
+@media (min-width: 769px) {
+  .hero-mobile-safe {
+    padding-top: 5rem;
+  }
+}
+
 @keyframes gentle-float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }

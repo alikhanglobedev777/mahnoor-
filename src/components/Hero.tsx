@@ -29,7 +29,7 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative flex min-h-[100svh] flex-col items-center justify-start overflow-hidden pb-24 pt-[max(4.5rem,env(safe-area-inset-top))] md:justify-center md:py-20"
+      className="hero-mobile-safe relative flex min-h-[100svh] flex-col items-center justify-start overflow-hidden pb-24 md:justify-center md:pb-20"
       style={{ ['--px' as string]: '0px', ['--py' as string]: '0px' }}
     >
       {/* cloud-like gradient blobs */}

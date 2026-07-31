@@ -56,7 +56,7 @@ export default function FloatingParticles({ type, count = 12 }: Props) {
               left: `${p.left}%`,
               top: '-30px',
               fontSize: `${p.size}px`,
-              animation: `float-up ${p.duration}s linear ${p.delay}s infinite`,
+              animation: `particle-rise ${p.duration}s linear ${p.delay}s infinite`,
               ['--drift' as string]: `${p.drift}px`,
               opacity: 0.8,
             }}
