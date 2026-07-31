@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiPlay, FiPause, FiVolume2, FiVolumeX, FiVolume1 } from 'react-icons/fi';
-import { startMusic, stopMusic, setVolume, getVolume } from '@/utils/music';
+import { startMusic, stopMusic, setVolume, isMusicRunning } from '@/utils/music';
 
 export default function MusicPlayer() {
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(() => isMusicRunning());
   const [volume, setVol] = useState(0.25);
   const [muted, setMuted] = useState(false);
   const [open, setOpen] = useState(false);
