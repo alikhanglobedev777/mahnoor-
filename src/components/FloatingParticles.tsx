@@ -57,8 +57,9 @@ export default function FloatingParticles({ type, count = 12 }: Props) {
               top: '-30px',
               fontSize: `${p.size}px`,
               animation: `particle-rise ${p.duration}s linear ${p.delay}s infinite`,
+              animationFillMode: 'both',
               ['--drift' as string]: `${p.drift}px`,
-              opacity: 0.8,
+              opacity: 0,
             }}
           >
             {EMOJI[type]}
